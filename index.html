@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anime Recommendations — Premium Lista Polecanych Anime</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#07070c] text-white">
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-40 glass-nav">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <a href="#hero" class="flex items-center gap-2 group">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-purple-500 to-orange-500 flex items-center justify-center shadow-lg shadow-purple-500/40">
+        <i data-lucide="flame" class="w-5 h-5 text-white"></i>
+      </div>
+      <span class="font-display font-extrabold text-lg tracking-tight bg-gradient-to-r from-purple-300 via-pink-300 to-orange-300 bg-clip-text text-transparent hidden sm:inline">Anime Recommendations</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-300">
+      <a href="#must-watch" class="hover:text-purple-400 transition">⭐ Must Watch</a>
+      <a href="#sections" class="hover:text-purple-400 transition">Kategorie</a>
+      <a href="#movies" class="hover:text-orange-400 transition">🎬 Filmy</a>
+    </div>
+    <div class="relative">
+      <input id="search" type="text" placeholder="Szukaj tytułu lub gatunku..." class="bg-white/5 border border-white/10 rounded-full pl-10 pr-4 py-2 text-sm w-44 sm:w-64 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition" />
+      <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+    </div>
+  </div>
+</nav>
+
+<header id="hero" class="relative pt-32 pb-24 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-[#07070c] to-orange-900/20"></div>
+  <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500/25 rounded-full blur-3xl animate-pulse"></div>
+  <div class="absolute bottom-10 right-10 w-96 h-96 bg-orange-500/15 rounded-full blur-3xl"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-500/5 rounded-full blur-3xl"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <span class="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-purple-300 mb-6 backdrop-blur-sm tracking-wider uppercase">✨ Prywatna kolekcja • Polecane przez fana</span>
+    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-[1.05]">
+      Twoja brama do <br class="hidden sm:block"/><span class="bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">świata anime</span>
+    </h1>
+    <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-8 leading-relaxed">Starannie wyselekcjonowana lista najlepszych tytułów — od epickich battle shōnenów, przez ciepłe romanse szkolne, po wzruszające filmy anime.</p>
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="#must-watch" class="px-7 py-3 rounded-full bg-gradient-to-r from-purple-600 to-orange-500 font-semibold hover:scale-105 transition-all shadow-xl shadow-purple-500/40 hover:shadow-purple-500/70">⭐ Zobacz Must Watch</a>
+      <a href="#sections" class="px-7 py-3 rounded-full bg-white/5 border border-white/15 font-semibold hover:bg-white/10 transition backdrop-blur-sm">Przeglądaj kategorie</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+
+  <section id="must-watch" class="mb-20 scroll-mt-24">
+    <div class="flex items-end justify-between mb-6 reveal">
+      <div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold flex items-center gap-3">
+          <span class="text-yellow-400 drop-shadow-[0_0_15px_rgba(251,191,36,0.7)]">⭐</span> Top Must Watch
+        </h2>
+        <p class="text-gray-400 mt-2">Bezwzględne hity, które musisz zobaczyć — sprawdzone i polecane.</p>
+      </div>
+    </div>
+    <div id="must-watch-grid" class="grid-cards"></div>
+  </section>
+
+  <div id="sections"></div>
+
+  <section id="movies" class="mt-24 scroll-mt-24">
+    <div class="reveal mb-6 movies-header">
+      <div class="inline-block px-3 py-1 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-300 text-xs font-bold tracking-widest uppercase mb-3">Pełnometrażowe</div>
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold flex items-center gap-3">
+        <span>🎬</span> Filmy Anime
+      </h2>
+      <p class="text-gray-400 mt-2 max-w-2xl">Kinowe arcydzieła animacji — od Makoto Shinkaia po Kyoto Animation. Każdy z tych filmów zostawia po sobie ślad.</p>
+    </div>
+    <div id="movies-grid" class="grid-cards"></div>
+  </section>
+
+  <div id="no-results" class="hidden text-center py-20">
+    <i data-lucide="search-x" class="w-16 h-16 mx-auto text-gray-600 mb-4"></i>
+    <p class="text-xl text-gray-400">Nie znaleziono anime pasującego do wyszukiwania.</p>
+  </div>
+</main>
+
+<footer class="border-t border-white/5 py-10 mt-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+    <p>Zrobione z ❤️ dla fanów anime • Anime Recommendations © 2026</p>
+  </div>
+</footer>
+
+<div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+  <div class="absolute inset-0 modal-backdrop"></div>
+  <div class="relative max-w-4xl w-full max-h-[92vh] overflow-y-auto glass-modal rounded-2xl shadow-2xl modal-content">
+    <button id="modal-close" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/50 hover:bg-purple-500/60 transition flex items-center justify-center backdrop-blur-sm border border-white/10">
+      <i data-lucide="x" class="w-5 h-5"></i>
+    </button>
+    <div id="modal-body" class="grid md:grid-cols-[300px_1fr] gap-6 p-6 md:p-8"></div>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
