@@ -112,7 +112,7 @@ function createCard(anime, category, index = 0) {
   card.dataset.category = category.toLowerCase();
   card.style.transitionDelay = `${Math.min(index * 45, 350)}ms`;
 
-  const poster = generatePosterSVG(anime.title, anime.mustWatch);
+  const poster = anime.image;
 
   card.innerHTML = `
     ${anime.mustWatch ? '<span class="must-badge">⭐ MUST WATCH</span>' : ''}
@@ -191,7 +191,7 @@ function buildStatsBadges(stats) {
 function openModal(anime, category) {
   const modal = document.getElementById('modal');
   const body = document.getElementById('modal-body');
-  const poster = generatePosterSVG(anime.title, anime.mustWatch);
+  const poster = anime.image;
   const statsHtml = buildStatsBadges(anime.stats);
 
   body.innerHTML = `
