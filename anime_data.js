@@ -136,6 +136,15 @@ export const sections = [
       { title: "Classroom of the Elite",image: "https://myanimelist.net/images/anime/5/86830.jpg", stats: { seasons: 4, movies: 0, ovas: 0, episodes: 53 }, genres: ["Dramat","Psychologiczne","Szkolne"], desc: "Elitarna szkoła Koudo Ikusei, w której studenci konkurują o punkty determinujące ich przyszłość. Ayanokouji to mistrz manipulacji.", why: "Death Note spotyka klasę szkolną — Ayanokouji to anti-protagonista, którego prawdziwe motywy nigdy nie są jasne. Każde 'Special Exam' to gra w 4D shogi." }
     ]
   },
+   {
+    id: "psychological-show",
+    title: "Dramat / psychologia / show-biznes ",
+    emoji: "🎭",
+    subtitle: "",
+    items: [
+      {title: "Oshi no ko",image: "https://myanimelist.net/images/anime/1987/135628.jpg", stats: {seasons: 3, movies: 0, ovas: 0, episodes: 36 }, genres: ["Dramat","Psychologiczne","Kłamstwa"], desc: "Mroczny dramat o świecie idoli, show-biznesu i obsesji na punkcie sławy, gdzie blask sceny skrywa manipulację, zemstę i bolesną prawdę o ludzkich pragnieniach.", why: "Świetnie pokazuje ciemną stronę show-biznesu i świata idoli, łącząc mocny dramat, tajemnicę i dobrze napisane postacie z emocjonalną historią, która szybko wciąga."}
+    ]
+  },
   {
     id: "science-postapo",
     title: "Nauka / postapokalipsa",
