@@ -197,7 +197,7 @@ function openModal(anime, category) {
   body.innerHTML = `
     <div class="modal-poster-col">
       <img src="${poster}" alt="${escapeHtml(anime.title)}" class="modal-poster" />
-      ${anime.mustWatch ? '<div class="modal-must-badge">⭐ MUST WATCH</div>' : ''}
+      ${anime.mustWatch ? '<div class="modal-must-badge">MUST WATCH</div>' : ''}
     </div>
     <div class="modal-info-col">
       <div class="modal-category">${escapeHtml(category)}</div>
