@@ -115,7 +115,7 @@ function createCard(anime, category, index = 0) {
   const poster = anime.image;
 
   card.innerHTML = `
-    ${anime.mustWatch ? '<span class="must-badge">⭐ MUST WATCH</span>' : ''}
+    ${anime.mustWatch ? '<span class="must-badge">MUST WATCH</span>' : ''}
     <div class="poster-wrap">
       <img src="${poster}" alt="${escapeHtml(anime.title)}" loading="lazy" />
       <div class="overlay">
